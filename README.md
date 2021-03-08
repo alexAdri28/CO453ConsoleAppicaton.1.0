@@ -1,9 +1,9 @@
 # C# Console Applications App01 to App05
 | Author | Details |
 | ---- | ---- |
-**Name**: | Student Name  |
-**Student ID**: | 12345678 |
-**Course:** | Computing |
+**Name**: | Berzin Daruwala |
+**Student ID**: | 21905650 |
+**Course:** | Cyber Security |
 **Module**: | CO453     |
 **Started**: | January 2021 |    
 
