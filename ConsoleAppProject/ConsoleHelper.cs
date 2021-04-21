@@ -46,11 +46,29 @@ namespace ConsoleAppProject
             choiceNo = Convert.ToInt32(value);
                 
             return choiceNo;
+           
 
 
 
 
         }
+
+   
     }
+    public static bool InRange(double value,double from,double to)
+    {
+        if (value >= from && value <= to)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+
 }
+
+
 

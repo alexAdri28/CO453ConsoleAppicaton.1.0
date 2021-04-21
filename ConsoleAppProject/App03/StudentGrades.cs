@@ -123,7 +123,23 @@ namespace ConsoleAppProject.App03
             }
 
         }
+        ///<summary>
+        /// give  marks  to  specific  student 
+        ///</summary>
+        public int  giveMarksTo(string name,int mark)
+        {
+            int i = 0;
+            foreach(string student in Students)
+            {
+                if(!ConsoleHelper.InRange(mark,lowestMark,highestMark))
+                {
+                    return -1;
+                }
+            }
+        }
     }
+
+
 }
 
 
