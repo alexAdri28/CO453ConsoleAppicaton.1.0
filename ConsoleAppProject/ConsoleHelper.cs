@@ -1,6 +1,7 @@
 ﻿using System;
 using ConsoleAppProject.App01;
 using ConsoleAppProject.App02;
+using ConsoleAppProject.App03;
 using System.Collections.Generic;
 using System.Text;
 
@@ -55,17 +56,7 @@ namespace ConsoleAppProject
 
    
     }
-    public static bool InRange(double value,double from,double to)
-    {
-        if (value >= from && value <= to)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
+   
 
 
 }

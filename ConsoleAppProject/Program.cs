@@ -1,5 +1,6 @@
 ﻿ using ConsoleAppProject.App01;
 using ConsoleAppProject.App02;
+using ConsoleAppProject.App03; 
 using System;
 
 namespace ConsoleAppProject
@@ -10,13 +11,15 @@ namespace ConsoleAppProject
     /// to start Apps 01 to 05 for CO453 CW1
     /// 
     /// This Project has been modified by:
-    /// Alex Gordillo Adriano 11/03/2021
+    /// Alex Gordillo Adriano 11/03/2021 
     /// </summary>
     public static class Program
     {
         private static DistanceConverter converter = new DistanceConverter();
 
         private static BMI Calculator = new BMI();
+
+        private static StudentGrades calculator = new StudentGrades();
         public static void Main(string[] args)
         {
 
@@ -39,6 +42,7 @@ namespace ConsoleAppProject
             }
             if (choiceNo == 3)
             {
+                calculator.CalculateMark();
                 
                
             }

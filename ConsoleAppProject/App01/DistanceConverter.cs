@@ -55,7 +55,7 @@ namespace ConsoleAppProject.App01
 
         public void CalculateDistance()
         {
-            
+
             if (FromUnit == MILES && ToUnit == FEET)
             {
                 ToDistance = FromDistance * FEET_IN_MILES;
@@ -86,7 +86,7 @@ namespace ConsoleAppProject.App01
         {
             string choice = DisplayChoices(prompt);
 
-           string unit = ExecuteChoice(choice);
+            string unit = ExecuteChoice(choice);
             Console.WriteLine($"\n You have chosen {unit}");
             return unit;
 
@@ -132,7 +132,7 @@ namespace ConsoleAppProject.App01
         {
             Console.Write(prompt);
             string value = Console.ReadLine();
-           return Convert.ToDouble(value);
+            return Convert.ToDouble(value);
 
         }
         private void OutputDistance()
@@ -141,10 +141,9 @@ namespace ConsoleAppProject.App01
                 $" is {ToDistance}  {ToUnit}!");
 
         }
-        
 
-            
-        }
-       
+
+
     }
 }
+

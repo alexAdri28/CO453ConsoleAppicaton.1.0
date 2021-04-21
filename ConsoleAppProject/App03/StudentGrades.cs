@@ -110,6 +110,18 @@ namespace ConsoleAppProject.App03
             Mean = total / Marks.Length;
 
         }
+        private void OutputGradeProfile()
+        {
+            Grades grade = Grades.F;
+            Console.WriteLine();
+            foreach (int count in GradeProfile)
+            {
+                 int precentange = count * 100 / Marks.Length;
+                Console.WriteLine($"Grade {grade} {precentange}% count{count}");
+                grade++;
+            }
+            Console.WriteLine();
+        }
         public void CalculateGradesProfile()
         { 
             for(int i = 0; i < GradeProfile.Length; i++)
@@ -123,20 +135,37 @@ namespace ConsoleAppProject.App03
             }
 
         }
-        ///<summary>
-        /// give  marks  to  specific  student 
-        ///</summary>
-        public int  giveMarksTo(string name,int mark)
+        public void CalculateMark()
         {
-            int i = 0;
-            foreach(string student in Students)
-            {
-                if(!ConsoleHelper.InRange(mark,lowestMark,highestMark))
-                {
-                    return -1;
-                }
-            }
+            
+            string[] choices = { "input Marks", "Output Mark", "Output Stats", "Output Grade profile", "Quit" };
+            int choiceNo = ConsoleHelper.SelectChoice(choices);
+            if (choiceNo == 1)
+                Console.WriteLine("Inputmarks");
+            else if (choiceNo == 2)
+
+                Console.WriteLine("output mark");
+
+            else if (choiceNo == 3)
+
+                Console.WriteLine("Output stats");
+
+            else if (choiceNo == 4)
+
+                OutputGradeProfile();
+
+            else if (choiceNo == 5)
+
+                System.Environment.Exit(0);
+
+
         }
+        internal void InputMarks(int[]Marks)
+        {
+
+        }
+       
+        
     }
 
 
