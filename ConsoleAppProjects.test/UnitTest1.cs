@@ -1,6 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ConsoleAppProject.App01;
 using ConsoleAppProject.App02;
+using ConsoleAppProject.App03;
 namespace ConsoleAppProjects.test
 {
     [TestClass]
@@ -90,4 +91,24 @@ public class TestBMICalculator
         Assert.AreEqual(expectedCalculation, Calculator.bmiResult);
 
     }
+    
 }
+public class testStundetGrades
+{
+    private readonly StudentGrades converter = new StudentGrades();
+    [TestMethod]
+
+    public void testConvert0ToStudentGradeF()
+    {
+       // Arrange 
+
+       Grades expectedGrade = Grades.F;
+
+        //act
+        Grades ActualGrade = converter.ConvertToGrade(0);
+        //Assert
+       Assert.AreEqual(expectedGrade, ActualGrade);
+        
+    }
+}
+
