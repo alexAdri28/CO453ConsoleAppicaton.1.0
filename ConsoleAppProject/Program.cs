@@ -1,6 +1,7 @@
 ﻿ using ConsoleAppProject.App01;
 using ConsoleAppProject.App02;
-using ConsoleAppProject.App03; 
+using ConsoleAppProject.App03;
+using ConsoleAppProject.App04;
 using System;
 
 namespace ConsoleAppProject
@@ -11,7 +12,7 @@ namespace ConsoleAppProject
     /// to start Apps 01 to 05 for CO453 CW1
     /// 
     /// This Project has been modified by:
-    /// Alex Gordillo Adriano 11/03/2021 
+    /// Alex Gordillo Adriano 23/04/2021 
     /// </summary>
     public static class Program
     {
@@ -20,6 +21,7 @@ namespace ConsoleAppProject
         private static BMI Calculator = new BMI();
 
         private static StudentGrades calculator = new StudentGrades();
+        private static  Networkapp app04 = new Networkapp();
         public static void Main(string[] args)
         {
 
@@ -28,7 +30,7 @@ namespace ConsoleAppProject
             Console.WriteLine("BNU CO453 Applications Programming 2020-2021!");
             Console.WriteLine();
             string choice = Console.ReadLine();
-            string[] choices = { " Distance Converter ", " BMI Calculator ","Students Grades" };
+            string[] choices = { " Distance Converter ", " BMI Calculator ","Students Grades"," Social Network " };
 
             int choiceNo = ConsoleHelper.SelectChoice(choices);
 
@@ -46,6 +48,11 @@ namespace ConsoleAppProject
                 
                
             }
+            if (choiceNo == 4)
+            {
+                app04.DisplayMenu();
+            }
+            else Console.WriteLine("Invalid Choice !");
         }
 
 
